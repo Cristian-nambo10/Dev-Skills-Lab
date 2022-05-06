@@ -55,3 +55,9 @@ body {
 #button:hover {
     cursor: pointer;
 }
+
+ul {
+    position: absolute;
+    top: 30%;
+    left: 18%;
+}
