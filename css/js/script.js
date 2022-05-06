@@ -9,9 +9,26 @@ btn.addEventListener('click', function() {
     console.log(list)
 })
 
-document.querySelector('ul').addEventListener('click', remove)
+// document.querySelector('ul').addEventListener('click', remove)
+//     function remove(evt) {
+//     evt.target.remove('li');
+// }
 
-function remove(evt) {
-    evt.target.remove('li');
-}
+// $('li').on('click', 'unorder', function() {
+//     $(this).closest('ul').remove()
+// })
+
+// $('#unorder').onclick(function() {
+//    $('ul').remove();
+// })
+// $('ul').remove();
+// $('#unorder').addEventListener('click', remove)
+$('list').addClass('link')
+
+$("#skills unorder").on("click", "button", function () {
+        $(this).closest("li").remove()
+      })
+
+
+
     
