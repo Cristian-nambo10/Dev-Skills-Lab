@@ -15,22 +15,26 @@
 
 $(function() {
   $('#button').click(function() {
-    let $item = $('#text-box').val();
-    $('ul#unorder').append('<li>' + $item + '</li>');
-    $item = $('#text-box').val(' ');
-    // $('ul#unorder').empty
+    let $item = $('#text-box').val()
+    $('#unorder').append(` <li><button> type="buttonX</button>" ${$item} </li>`);
+    $item = $('#text-box').val(' ')
+    // $('ul#unorder').empty()
   });
 });
+
+$('#unorder').on('click', 'button', function() {
+  $(this).closest('li').remove()
+})
 
 // $('button').live(() => {
 //   $('li').addClass('clear');
 // });
 
-$('ul#unorder').live('click', function() {
-  if ('click' === true) {
-    $('ul#unorder').children().remove();
-  }
-})
+// $('ul#unorder').live('click', function() {
+//   if ('click' === true) {
+//     $('ul#unorder').children().remove();
+//   }
+// })
 
 
 
