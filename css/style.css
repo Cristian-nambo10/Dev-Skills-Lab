@@ -61,3 +61,23 @@ ul {
     top: 30%;
     left: 18%;
 }
+
+.fa-brands {
+    position: absolute;
+    top: 95%;
+    left: 20px;
+}
+
+.twitter {
+    position: absolute;
+    top: 457px;
+    left: 40px;
+}
+
+#other {
+    position: absolute;
+    top: 475px;
+    left: 25%;
+}
+
+

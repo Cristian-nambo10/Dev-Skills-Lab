@@ -8,3 +8,10 @@ btn.addEventListener('click', function() {
     input.value = ''
     console.log(list)
 })
+
+document.querySelector('ul').addEventListener('click', remove)
+
+function remove(evt) {
+    evt.target.remove('li');
+}
+    
