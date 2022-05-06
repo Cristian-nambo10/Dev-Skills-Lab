@@ -16,7 +16,7 @@
 $(function() {
   $('#button').click(function() {
     let $item = $('#text-box').val()
-    $('#unorder').append(` <li><button> type="buttonX</button>" ${$item} </li>`);
+    $('#unorder').append(`<li><button type="button">X</button>${$item}</li>`);
     $item = $('#text-box').val(' ')
     // $('ul#unorder').empty()
   });
@@ -26,6 +26,13 @@ $('#unorder').on('click', 'button', function() {
   $(this).closest('li').remove()
 })
 
+let enter = document.getElementById('text-box');
+enter.addEventListener('keypress', function(evt) {
+  if (evt.key === 'Enter') {
+    evt.preventDefault();
+    document.getElementById('button').click();
+  }
+});
 // $('button').live(() => {
 //   $('li').addClass('clear');
 // });
