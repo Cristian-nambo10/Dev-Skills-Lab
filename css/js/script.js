@@ -1,34 +1,42 @@
-let btn = document.getElementById('button');
 
-btn.addEventListener('click', function() {
-    let list = document.createElement('li')
-    let input = document.getElementById('text-box')
-    list.textContent = input.value
-    document.querySelector('ul').appendChild(list);
-    input.value = ''
-    console.log(list)
-})
+// btn.addEventListener('click', function() {
+//     let list = document.createElement('li')
+//     let input = document.getElementById('text-box')
+//     list.textContent = input.value
+//     document.querySelector('ul').appendChild(list);
+//     input.value = ''
+//     console.log(list)
 
 // document.querySelector('ul').addEventListener('click', remove)
 //     function remove(evt) {
 //     evt.target.remove('li');
 // }
 
-// $('li').on('click', 'unorder', function() {
-//     $(this).closest('ul').remove()
-// })
 
-// $('#unorder').onclick(function() {
-//    $('ul').remove();
-// })
-// $('ul').remove();
-// $('#unorder').addEventListener('click', remove)
-$('list').addClass('link')
+$(function() {
+  $('#button').click(function() {
+    let $item = $('#text-box').val();
+    $('ul#unorder').append('<li>' + $item + '</li>');
+    $item = $('#text-box').val(' ');
+    // $('ul#unorder').empty
+  });
+});
 
-$("#skills unorder").on("click", "button", function () {
-        $(this).closest("li").remove()
-      })
+// $('button').live(() => {
+//   $('li').addClass('clear');
+// });
 
+$('ul#unorder').live('click', function() {
+  if ('click' === true) {
+    $('ul#unorder').children().remove();
+  }
+})
+
+
+
+  
+
+  
 
 
     
